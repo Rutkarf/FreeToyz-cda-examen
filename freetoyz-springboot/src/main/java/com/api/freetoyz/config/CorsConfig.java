@@ -1,4 +1,4 @@
-package com.FreeToyz.config;
+package com.api.freetoyz.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +16,7 @@ public class CorsConfig {
                         .allowedOrigins("http://localhost:4200") //l'URL du frontend Angular
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
+
             }
         };
     }

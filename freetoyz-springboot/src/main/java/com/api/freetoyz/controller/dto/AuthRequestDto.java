@@ -1,4 +1,4 @@
-package com.api.freetoyz.controller.security.dto;
+package com.api.freetoyz.controller.dto;
 
 public class AuthRequestDto {
     private String username;

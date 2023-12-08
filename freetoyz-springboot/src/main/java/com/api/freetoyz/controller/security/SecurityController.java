@@ -1,8 +1,8 @@
 package com.api.freetoyz.controller.security;
 
 
-import com.api.freetoyz.controller.security.dto.AuthRequestDto;
-import com.api.freetoyz.controller.security.dto.AuthResponseDto;
+import com.api.freetoyz.controller.dto.AuthRequestDto;
+import com.api.freetoyz.controller.dto.AuthResponseDto;
 import com.api.freetoyz.exception.AccountExistsException;
 import com.api.freetoyz.exception.UnauthorizedException;
 import com.api.freetoyz.services.JwtUserService;

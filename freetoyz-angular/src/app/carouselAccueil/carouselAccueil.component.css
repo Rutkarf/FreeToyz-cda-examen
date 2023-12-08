@@ -1,0 +1,47 @@
+#carouselExampleDark {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 20px 20px 20px 20px;
+}
+
+.carousel-item {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 25%;
+  margin-right: 15px;
+  padding: 10px;
+  border: 3px solid #ba17a7;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item:hover {
+  box-shadow: 0 8px 16px rgba(168, 11, 129, 0.2);
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  color: #666;
+  word-wrap: break-word;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.carousel-caption:hover h5,
+.carousel-caption:hover p {
+  opacity: 0.8;
+  color: #ba17a7;
+}
+
+.carousel-item img {
+  max-width: 25%;
+  height: auto;
+  border-radius: 6px;
+}

@@ -1,4 +1,4 @@
-package com.api.freetoyz.services;
+package com.api.freetoyz.services.user;
 
 import com.api.freetoyz.exception.AccountExistsException;
 import org.springframework.security.core.Authentication;

@@ -1,4 +1,4 @@
-package com.api.freetoyz.repository.security;
+package com.api.freetoyz.repository;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

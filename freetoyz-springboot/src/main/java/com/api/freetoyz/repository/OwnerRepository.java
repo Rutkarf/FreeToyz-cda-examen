@@ -1,4 +1,4 @@
-package com.api.freetoyz.repository.security;
+package com.api.freetoyz.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

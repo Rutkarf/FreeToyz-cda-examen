@@ -1,9 +1,9 @@
-package com.api.freetoyz.service.impl;
+package com.api.freetoyz.services.impl;
 
 import com.api.freetoyz.exception.AccountExistsException;
-import com.api.freetoyz.repository.security.OwnerRepository;
-import com.api.freetoyz.repository.security.OwnerRepositoryModel;
-import com.api.freetoyz.service.JwtUserService;
+import com.api.freetoyz.repository.OwnerRepository;
+import com.api.freetoyz.repository.OwnerRepositoryModel;
+import com.api.freetoyz.services.JwtUserService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

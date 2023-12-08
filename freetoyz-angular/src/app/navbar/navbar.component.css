@@ -1,0 +1,6 @@
+.navbar {
+  background-image: url('src/assets/upload/CoverCDC.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  color: white;
+}

@@ -1,4 +1,4 @@
-package com.api.freetoyz.controller.security.dto; // Declaración del paquete donde se encuentra la clase
+package com.api.freetoyz.controller.dto; // Declaración del paquete donde se encuentra la clase
 
 import org.springframework.security.core.userdetails.UserDetails;
 

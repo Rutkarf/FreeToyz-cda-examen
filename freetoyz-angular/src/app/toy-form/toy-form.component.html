@@ -1,0 +1,23 @@
+<!-- toy-form.component.html -->
+<div class="form">
+<form class="toy-form">
+    <h3>{{ formTitle }}</h3>
+  
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="toy.name" required>
+  
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="toy.description" required></textarea>
+
+      <label for="cotation">cotation:</label>
+    <textarea id="cotation" name="cotation" [(ngModel)]="toy.cotation" required></textarea>
+
+    <label for="description">quantite:</label>
+    <textarea id="quantite" name="quantite" [(ngModel)]="toy.quantite" required></textarea>
+
+    <label for="image">Image URL:</label>
+    <input type="text" id="profil_picture" name="profil_picture" [(ngModel)]="toy.image" required>
+  
+    <button type="submit" (click)="onSubmit()">Soumettre un Toyz</button>
+  </form>
+  </div>

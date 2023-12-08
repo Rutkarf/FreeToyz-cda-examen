@@ -1,6 +1,6 @@
 package com.api.freetoyz.config;
 
-import com.api.freetoyz.service.JwtUserService;
+import com.api.freetoyz.services.JwtUserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

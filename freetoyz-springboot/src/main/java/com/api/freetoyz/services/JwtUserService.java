@@ -1,8 +1,9 @@
-package com.api.freetoyz.service;
+package com.api.freetoyz.services;
 
+import com.api.freetoyz.services.user.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public interface JwtUserService extends UserService{
+public interface JwtUserService extends UserService {
     String generateJwtForUser(UserDetails user);
     UserDetails getUserFromJwt(String jwt);
 }

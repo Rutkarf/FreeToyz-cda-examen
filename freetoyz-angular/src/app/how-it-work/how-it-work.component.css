@@ -1,0 +1,63 @@
+h3 {
+  text-align: center;
+  color: #3498db;
+}
+
+ .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.how-it-works,
+.Explore,
+.Connect {
+  text-align: center;
+  max-width: 500px;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.how-it-works {
+  background-image: url('src/assets/upload/CoverCDC.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+.Explore {
+  background-image: url('src/assets/upload/CoverCDC.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+.Connect {
+  background-image: url('src/assets/upload/CoverCDC.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+.SignUp form {
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
