@@ -5,7 +5,7 @@ import com.api.freetoyz.controller.security.dto.AuthRequestDto;
 import com.api.freetoyz.controller.security.dto.AuthResponseDto;
 import com.api.freetoyz.exception.AccountExistsException;
 import com.api.freetoyz.exception.UnauthorizedException;
-import com.api.freetoyz.service.JwtUserService;
+import com.api.freetoyz.services.JwtUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -30,9 +30,13 @@ public class SecurityController {
     }
 //Remarque : ajouter un nouvel utilisateur et génère un JWT à la volée
 
+
+
+
+
+
     @PostMapping("/authorize")
-    public ResponseEntity<AuthResponseDto> authorize(@RequestBody AuthRequestDto
-                                                          requestDto) throws UnauthorizedException {
+    public ResponseEntity<AuthResponseDto> authorize(@RequestBody AuthRequestDto requestDto) throws UnauthorizedException {
         Authentication authentication = null;
         try {
             authentication = userService.authenticate(requestDto.getUsername(),
