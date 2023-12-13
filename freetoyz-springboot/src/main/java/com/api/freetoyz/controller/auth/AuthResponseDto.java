@@ -1,4 +1,4 @@
-package com.api.freetoyz.controller.dto; // Declaración del paquete donde se encuentra la clase
+package com.api.freetoyz.controller.auth; // Declaración del paquete donde se encuentra la clase
 
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -12,6 +12,7 @@ public class AuthResponseDto {
         this.user = user;   // Inicialización del campo de detalles del usuario
         this.token = token; // Inicialización del campo de token
     }
+
 
     // Método getter para obtener los detalles del usuario
     public UserDetails getUser() {

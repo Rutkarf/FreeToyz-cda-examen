@@ -2,8 +2,8 @@ package com.api.freetoyz.services.impl;
 
 import com.api.freetoyz.exception.AccountExistsException;
 import com.api.freetoyz.repository.OwnerRepository;
-import com.api.freetoyz.repository.OwnerRepositoryModel;
-import com.api.freetoyz.services.JwtUserService;
+import com.api.freetoyz.repository.security.OwnerRepositoryModel;
+import com.api.freetoyz.services.security.JwtUserService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
@@ -30,7 +31,9 @@ public class JwtUserServiceImpl implements JwtUserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
     private final String signingKey;
-    public JwtUserServiceImpl(@Value("${jwt.signing.key}") String signingKey) {
+    public JwtUserServiceImpl(OwnerRepository ownerRepository, PasswordEncoder passwordEncoder, @Value("${jwt.signing.key}") String signingKey) {
+        this.ownerRepository = ownerRepository;
+        this.passwordEncoder = passwordEncoder;
         this.signingKey = signingKey;
     }
 
@@ -53,15 +56,20 @@ public class JwtUserServiceImpl implements JwtUserService {
         return authenticationConfiguration.getAuthenticationManager().authenticate(authentication);
     }
 
-
     @Override
     public UserDetails save(String username, String password) throws AccountExistsException {
+        return null;
+    }
+
+
+    @Override
+    public OwnerRepositoryModel save(String username, String password, String pseudo, String location, String description, String Adresse, MultipartFile profil_picture) throws AccountExistsException {
         UserDetails existingUser = ownerRepository.findByLogin(username);
         if (existingUser != null) {
             throw new AccountExistsException();
         }
         OwnerRepositoryModel owner = new OwnerRepositoryModel();
-        owner.setLogin(username);
+        owner.setEmail(username);
         owner.setPassword(passwordEncoder.encode(password));
         ownerRepository.save(owner);
         return owner;
@@ -93,5 +101,7 @@ public class JwtUserServiceImpl implements JwtUserService {
                         .signWith(SignatureAlgorithm.HS512, signingKey)
                         .compact();
     }
+
+
 
 }

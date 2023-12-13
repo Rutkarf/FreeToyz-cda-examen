@@ -1,8 +1,9 @@
-package com.api.freetoyz.services.toyz;
+package com.api.freetoyz.services.model;
 
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Optional;
 
@@ -18,10 +19,18 @@ public class ToyzServiceModel {
     private String description;
     private String cotation;
     private String quantite;
-    private String picture;
+    private MultipartFile picture;
 
-    public ToyzServiceModel(Optional id, String name, String description, String cotation, String quantite, String picture) {
-        this.id = id;
+    public ToyzServiceModel(Long id, String name, String description, String cotation, String quantite, MultipartFile picture) {
+        this.id = Optional.ofNullable(id);
+        this.name = name;
+        this.description = description;
+        this.cotation = cotation;
+        this.quantite = quantite;
+        this.picture = picture;
+    }
+
+    public ToyzServiceModel(String name, String description, String cotation, String quantite, MultipartFile picture) {
         this.name = name;
         this.description = description;
         this.cotation = cotation;

@@ -1,9 +1,12 @@
 package com.api.freetoyz.controller.carousel;
 
+import com.api.freetoyz.services.carousel.CarouselService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/carousel")
@@ -15,8 +18,8 @@ public class CarouselController {
         this.carouselService = carouselService;
     }
 
-    @GetMapping("/items")
-    public List<CarouselItem> getCarouselItems() {
-        return carouselService.getCarouselItems();
-    }
+//    @GetMapping("/toyz")
+//    public <CarouselToyz> List<CarouselToyz> getCarouselToyzs() {
+//        return carouselService.getCarouselToyzs();
+//    }
 }

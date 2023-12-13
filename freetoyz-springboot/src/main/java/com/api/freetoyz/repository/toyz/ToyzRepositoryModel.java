@@ -19,6 +19,15 @@ public class ToyzRepositoryModel {
     private Optional id;
     @Column(name="name")
     private String name;
+
+    public ToyzRepositoryModel(String name, String description, String cotation, String quantite, String picture) {
+        this.name = name;
+        this.description = description;
+        this.cotation = cotation;
+        this.quantite = quantite;
+        this.picture = picture;
+    }
+
     @Column(name="description")
     private String description;
     @Column(name="cotation")
@@ -27,5 +36,6 @@ public class ToyzRepositoryModel {
     private String quantite;
     @Column(name="picture")
     private String picture;
+
 
 }

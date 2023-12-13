@@ -1,4 +1,4 @@
-package com.api.freetoyz.repository;
+package com.api.freetoyz.repository.security;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

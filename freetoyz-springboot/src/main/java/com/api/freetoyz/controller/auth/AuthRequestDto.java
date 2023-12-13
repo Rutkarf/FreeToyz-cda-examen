@@ -1,8 +1,10 @@
-package com.api.freetoyz.controller.dto;
+package com.api.freetoyz.controller.auth;
 
 public class AuthRequestDto {
     private String username;
     private String password;
+
+    //todo ajouter les infos du user
 
     public String getUsername() {
         return username;

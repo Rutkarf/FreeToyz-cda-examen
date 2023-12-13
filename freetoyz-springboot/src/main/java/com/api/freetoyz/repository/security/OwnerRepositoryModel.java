@@ -1,6 +1,8 @@
-package com.api.freetoyz.repository;
+package com.api.freetoyz.repository.security;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -9,46 +11,37 @@ import java.util.List;
 
 
 @Entity
+@Data
+@NoArgsConstructor
+@Table(name="user")
 public class OwnerRepositoryModel implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(unique = true, length = 32)  // security : avoid conceptual duplicates to
-   // avoid unexpected behaviors
-
-    private String login;
     private String password;
+
+    @Column(name="email", unique = true, length = 255)
+    private String email;
+
+    @Column(name="location")
+    private String location;
+
+    @Column(name="telephone")
+    private String telephone;
+
+    @Column(name="description")
+    private String description;
+
+    @Column(name="profil_picture")
+    private String profilPicture;
+
+    @Column(name="adresse")
+    private String adresse;
+
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
 
-    // Adding setters for registration purposes
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
 
 // Implementing methods for security
     @Override
@@ -61,7 +54,7 @@ public class OwnerRepositoryModel implements UserDetails {
     }
     @Override
     public String getUsername() {
-        return login;
+        return email;
     }
     @Override
     public boolean isAccountNonExpired() {
@@ -80,4 +73,4 @@ public class OwnerRepositoryModel implements UserDetails {
         return true;
     }
 }
-//Remarque : Ce qui marque un utilisateur, c'est cette ligne : implements UserDetails
+

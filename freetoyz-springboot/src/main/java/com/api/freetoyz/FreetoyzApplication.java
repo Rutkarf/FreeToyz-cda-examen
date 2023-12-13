@@ -12,4 +12,7 @@ public class FreetoyzApplication {
 		SpringApplication.run(FreetoyzApplication.class, args);
 	}
 
+
+
+
 }
