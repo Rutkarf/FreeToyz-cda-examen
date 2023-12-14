@@ -1,0 +1,13 @@
+/* Ajoutez ces styles à votre feuille de style CSS */
+
+footer {
+  background-image: url('src/assets/upload/CoverCDC.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  color: #fff; /* Texte en blanc */
+}
+
+.footer p {
+  color: #ecf0f1; /* Couleur du texte */
+}
+

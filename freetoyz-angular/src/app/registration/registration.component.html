@@ -1,0 +1,29 @@
+<!-- registration.component.html -->
+<div class="container p-4">
+  <h3 class="text-center text-primary">Register</h3>
+
+  <form #form="ngForm" (submit)="onSubmit(form)" enctype="multipart/form-data">
+    <!-- <div class="mb-3">
+      <label for="exampleInputPseudo" class="form-label">Pseudo:</label>
+      <input type="text" class="form-control" id="exampleInputPseudo" placeholder="Pseudo">
+    </div> -->
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address:</label>
+      <input type="email" class="form-control" id="username" name="username" [(ngModel)]="user.username" aria-describedby="emailHelp"
+        placeholder="Email">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" placeholder="Mot de passe">
+    </div>
+    <!-- <div class="mb-3">
+      <label for="exampleInputPassword2" class="form-label">Repeat Password:</label>
+      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Repeat Password">
+    </div> -->
+    <!-- <div class="mb-3">
+      <label for="formFile" class="form-label">Choose Picture :</label>
+      <input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+    </div> -->
+    <button class="btn btn-outline-primary">Envoyer</button>
+  </form>
+</div>

@@ -1,0 +1,60 @@
+<!-- navbar.component.html -->
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img src="./assets/upload/LogoDetourer.PNG" alt="FreeToyz Logo" width="45" />
+    </a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/how-it-work">How It Works ?!</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="/toys" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Toys
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/toys-form">Toys Form</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="/user-profil" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/user-profil-edit">Edit Profile</a></li>
+        </ul>
+        </li>
+      </ul>
+      
+      <form class="d-flex" role="search">
+        <ng-container *ngIf="!isLoggedIn(); else loggedInTemplate">
+          <!-- Affiche le nom de l'utilisateur et un bouton de déconnexion pour les utilisateurs connectés -->
+          
+         
+          
+          <!-- Boutons pour les utilisateurs non connectés -->
+          <a routerLink="/register" class="nav-link btn btn-sm btn-outline-dark me-2">Register</a>
+          <a routerLink="/login" class="nav-link btn btn-sm btn-outline-dark">Login</a>
+        </ng-container>
+        <ng-template #loggedInTemplate>
+          <a  (click)="logout()" class="nav-link btn btn-sm btn-outline-dark">Logout</a>
+      <span class="nav-link">
+        Bienvenue, {{ getUserName() }}
+      </span>
+          <!-- Contenu spécifique aux utilisateurs connectés -->
+          <a routerLink="/user-profile" class="nav-link btn btn-sm btn-outline-dark me-2">Profile</a>
+          <!-- Ajoutez d'autres liens ou fonctionnalités ici -->
+        </ng-template>
+
+      </form>
+    </div>
+  </div>
+</nav>
+       
