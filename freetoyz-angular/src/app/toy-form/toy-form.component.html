@@ -1,0 +1,40 @@
+<!-- toy-form.component.html -->
+<div class="container mt-5">
+  <form #form = "ngForm" class="toy-form">
+    <h3>{{ formTitle }}</h3>
+  
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="toy.name" class="form-control" required>
+    </div>
+  
+    <div class="mb-3">
+      <label for="description" class="form-label">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="toy.description" class="form-control" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="cotation" class="form-label">Cotation:</label>
+      <textarea id="cotation" name="cotation" [(ngModel)]="toy.cotation" class="form-control" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="categories" class="form-label">Catégorie:</label>
+      <select id="categories" name="categories" [(ngModel)]="toy.categories" class="form-select" required>
+        <option *ngFor="let category of categoriesList" [value]="category">{{category}}</option>
+      </select>
+    </div>
+    
+    <div class="mb-3">
+      <label for="quantite" class="form-label">Quantite:</label>
+      <textarea id="quantite" name="quantite" [(ngModel)]="toy.quantite" class="form-control" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="profil_picture" class="form-label">Image URL:</label>
+      <input type="text" id="profil_picture" name="profil_picture" [(ngModel)]="toy.picture" class="form-control" required>
+    </div>
+  
+    <button class="btn btn-primary" (click)="onSubmit()">Soumettre un Toyz</button>
+  </form>
+</div>

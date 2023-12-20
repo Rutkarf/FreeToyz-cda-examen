@@ -1,0 +1,29 @@
+<!-- carouselAccueil.component.html -->
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-inner">
+    <div *ngFor="let toy of carouselToys; let first = first" 
+         class="carousel-item" 
+         [class.active]="first"
+         [attr.data-bs-interval]="2000">
+         <img src="assets/upload/ToyzDeBase.png" class="d-block w-25" alt="ToyStatique">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{toy.name}}</h5>
+        <p>{{toy.categories}}</p>
+        <p>{{toy.description}}</p>
+        <p>{{toy.cotation}}</p>
+        <p>{{toy.quantite}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contrôles de navigation -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

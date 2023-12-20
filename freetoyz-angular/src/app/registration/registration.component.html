@@ -1,0 +1,45 @@
+<!-- registration.component.html -->
+<div class="container p-4">
+  <h3 class="text-center text-primary">Register</h3>
+
+  <form #form="ngForm" (submit)="onSubmit(form)" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleInputPseudo" class="form-label">Pseudo:</label>
+      <input type="text" class="form-control" id="exampleInputPseudo" name="pseudo" [(ngModel)]="user.pseudo" placeholder="Pseudo" required>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address:</label>
+      <input type="email" class="form-control" id="username" name="username" [(ngModel)]="user.username" aria-describedby="emailHelp"
+        placeholder="Email" required>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" placeholder="Mot de passe">
+    </div>
+     <div class="mb-3">
+      <label for="exampleInputPassword2" class="form-label">Repeat Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Repeat Password">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputLocation" class="form-label">Location:</label>
+      <input type="text" class="form-control" id="location" name="location" [(ngModel)]="user.location" placeholder="Location">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputTelephone" class="form-label">Telephone:</label>
+      <input type="tel" class="form-control" id="telephone" name="telephone" [(ngModel)]="user.telephone" placeholder="Telephone">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputDescription" class="form-label">Description:</label>
+      <textarea class="form-control" id="description" name="description" [(ngModel)]="user.description" placeholder="Description"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputAddress" class="form-label">Adresse:</label>
+      <input type="text" class="form-control" id="address" name="address" [(ngModel)]="user.addresse" placeholder="Adresse">
+    </div>
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Choose Profile Picture:</label>
+      <input class="form-control" type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+    </div>
+    <button class="btn btn-outline-primary">Envoyer</button>
+  </form>
+</div>

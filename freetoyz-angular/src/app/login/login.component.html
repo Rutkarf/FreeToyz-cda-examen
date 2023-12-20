@@ -1,0 +1,17 @@
+<!-- login.component.html -->
+<div class="container p-4">
+  <h2 class="text-center text-primary">Login</h2>
+  <form>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username:</label>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required>
+    </div>
+
+    <button class="btn btn-outline-primary" (click)="onSubmit()">Login</button>
+  </form>
+</div>

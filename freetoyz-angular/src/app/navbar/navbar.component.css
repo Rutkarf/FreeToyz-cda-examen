@@ -1,0 +1,10 @@
+.navbar {
+  background-image: url('src/assets/upload/CoverCDC.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.custom-link {
+  color: white !important; /* !important assure que cette règle prévaut sur les autres styles */
+}
