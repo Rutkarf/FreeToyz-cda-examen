@@ -3,15 +3,18 @@
   <h3 class="text-center text-primary">Register</h3>
 
   <form #form="ngForm" (submit)="onSubmit(form)" enctype="multipart/form-data">
+
     <div class="mb-3">
-      <label for="exampleInputPseudo" class="form-label">Pseudo:</label>
-      <input type="text" class="form-control" id="exampleInputPseudo" name="pseudo" [(ngModel)]="user.pseudo" placeholder="Pseudo" required>
+      <label for="exampleInputEmail1" class="form-label">Email addresse:</label>
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" aria-describedby="emailHelp" placeholder="Email" required>
     </div>
+
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address:</label>
-      <input type="email" class="form-control" id="username" name="username" [(ngModel)]="user.username" aria-describedby="emailHelp"
-        placeholder="Email" required>
+      <label for="exampleInputusername" class="form-label">username:</label>
+      <input type="text" class="form-control" id="exampleInputusername" name="username" [(ngModel)]="user.username" [(ngModel)]="user.username" placeholder="username" required>
     </div>
+
+
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password:</label>
       <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" placeholder="Mot de passe">
@@ -34,7 +37,7 @@
     </div>
     <div class="mb-3">
       <label for="exampleInputAddress" class="form-label">Adresse:</label>
-      <input type="text" class="form-control" id="address" name="address" [(ngModel)]="user.addresse" placeholder="Adresse">
+      <input type="text" class="form-control" id="adresse" name="adresse" [(ngModel)]="user.adresse" placeholder="Adresse">
     </div>
     <div class="mb-3">
       <label for="formFile" class="form-label">Choose Profile Picture:</label>

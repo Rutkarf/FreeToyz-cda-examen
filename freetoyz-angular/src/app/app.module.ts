@@ -52,9 +52,12 @@ import { ChatComponent } from './chat/chat.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'toys', component: ToysComponent },
+      { path: 'toys', component: ToysComponent, children: [
+        { path: 'toy-form', component: ToyFormComponent },
+        // Ajoute d'autres routes enfants au besoin
+      ] },
       { path: 'profile', component: UserProfileComponent },
-      // ... ajoutez d'autres routes selon vos besoins
+      // ... ajoute d'autres routes selon tes besoins
     ]),
   ],
   providers: [SocketService],

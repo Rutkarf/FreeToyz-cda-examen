@@ -15,13 +15,13 @@ export class RegistrationComponent {
   constructor(private auth: AuthenticationService) {}
 
   user: Register = {
-    pseudo: '',
+    email: '',
     username: '',
     password: '',
     location: '',
     telephone: '',
     description: '',
-    addresse: '',
+    adresse: '',
     profilePicture: '', // Ajoute le type approprié ici, probablement une chaîne (string)
   };
 

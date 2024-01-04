@@ -1,18 +1,26 @@
-<!-- carouselAccueil.component.html -->
-
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
   <div class="carousel-inner">
     <div *ngFor="let toy of carouselToys; let first = first" 
          class="carousel-item" 
          [class.active]="first"
          [attr.data-bs-interval]="2000">
-         <img src="assets/upload/ToyzDeBase.png" class="d-block w-25" alt="ToyStatique">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{toy.name}}</h5>
-        <p>{{toy.categories}}</p>
-        <p>{{toy.description}}</p>
-        <p>{{toy.cotation}}</p>
-        <p>{{toy.quantite}}</p>
+      <div class="card text-center border">
+        <div class="row">
+          <div class="col-md-3 bg-light"><!-- Colonne à gauche (blanc) --></div>
+          <div class="col-md-3">
+            <img [src]="toy.picturePath" class="card-img-top w-100" alt="{{toy.name}}">
+          </div>
+          <div class="col-md-3">
+            <div class="card-body">
+              <h5 class="card-title">Nom du Toyz : {{toy.name}}</h5>
+              <p class="card-text">Categories : {{toy.categories}}</p>
+              <p class="card-text">Description : {{toy.description}}</p>
+              <p class="card-text">Cotation : {{toy.cotation}}</p>
+              <p class="card-text">Quantite : {{toy.quantite}}</p>
+            </div>
+          </div>
+          <div class="col-md-3 bg-light"><!-- Colonne à droite (blanc) --></div>
+        </div>
       </div>
     </div>
   </div>

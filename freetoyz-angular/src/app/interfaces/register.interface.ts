@@ -1,12 +1,13 @@
 // register.interface.ts
 
 export interface Register {
-    pseudo: string;
+
+    email: string;
     username: string;
     password: string;
     location: string;
     telephone: string;
     description: string;
-    addresse: string;
+    adresse: string;
     profilePicture: string; // Ajoute le type approprié ici, probablement une chaîne (string)
   }

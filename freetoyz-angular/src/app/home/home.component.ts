@@ -2,7 +2,8 @@
 
 
 // Dans home.component.ts
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { CarouselAccueilComponent } from '../carouselAccueil/carouselAccueil.component';
 
 
 
@@ -13,6 +14,13 @@ import { Component } from '@angular/core';
   
 })
 export class HomeComponent {
-  // ... Déclarations de propriétés et de méthodes
+
+
+  @ViewChild(CarouselAccueilComponent) carousel!: CarouselAccueilComponent;
+
+  showToyzBySearch = (listToyzsBySearch:any) => {
+    // console.log( "get", listToyzsBySearch);
+    this.carousel.carouselToys = listToyzsBySearch;
+  }
 }
 

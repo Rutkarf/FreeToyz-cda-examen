@@ -11,10 +11,14 @@ export class UserProfileComponent implements OnInit {
   // ... le reste du code
 
   user: any = { // Assure-toi d'avoir une structure de données correspondante
-    name: 'John Doe',
-    email: 'john@example.com',
-    location: 'City, Country',
-    avatar: 'assets/upload/LogoDetourer.PNG'
+    email: '',
+    username: '', 
+    location:'',
+    telephone:'',
+    description:'',
+    profil_picture:'',
+    adresse:'',
+    avatar: ''
     // Ajoute d'autres propriétés selon tes besoins
   };
 

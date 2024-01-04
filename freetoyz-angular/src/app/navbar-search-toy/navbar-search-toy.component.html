@@ -1,20 +1,29 @@
-<nav class="navbar navbar-expand-lg">
+
+<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavAltMarkup">
-      <div class="navbar-nav flex-grow-1">
-        <a class="nav-link" routerLink="/">Outdoor</a>
-        <a class="nav-link" routerLink="/">Indoor</a>
-        <a class="nav-link" routerLink="/">Electronique</a>
-        <a class="nav-link" routerLink="/">Collection</a>
-      </div>
-      <div class="search-container ms-lg-4 d-flex">
-        <input type="text" class="form-control me-2" placeholder="Search toy or catégorie">
-        <button class="btn btn-primary">Search</button>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown"> 
+          <a class="nav-link" routerLink="/">Outdoor</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" routerLink="/">Indoor</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" routerLink="/">Electronique</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" routerLink="/">Collection</a>
+        </li>
+      </ul>
+      <form #searchForm="ngForm" class="d-flex" role="search" (ngSubmit)="send(searchForm)">
+        <input class="form-control me-2" type="search" placeholder="Search" ngModel name="search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </nav>
